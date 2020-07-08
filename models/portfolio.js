@@ -8,25 +8,23 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     portfolio_name: {
-        type: DataTypes.STRING,
-        allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false
     },
     display: {
       type: DataTypes.BOOLEAN,
       defaultValue: 0
-  },
-  stock_1: {
-    type: DataTypes.STRING,
-},
-stock_2: {
-  type: DataTypes.STRING,
-},
-stock_3: {
-  type: DataTypes.STRING,
-},
-    
+    },
+    stock_1: {
+      type: DataTypes.STRING
+    },
+    stock_2: {
+      type: DataTypes.STRING
+    },
+    stock_3: {
+      type: DataTypes.STRING
+    }
   });
-
 
   return Portfolio;
 };
