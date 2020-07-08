@@ -1,5 +1,5 @@
 // Creating our Portfolio model
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   const Portfolio = sequelize.define("Portfolio", {
     // The email cannot be null, and must be a proper email before creation
     portfolio_id: {
@@ -16,17 +16,15 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: 0
     },
     stock_1: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
     stock_2: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
     stock_3: {
-      type: DataTypes.STRING,
-    },
-
+      type: DataTypes.STRING
+    }
   });
-
 
   return Portfolio;
 };
