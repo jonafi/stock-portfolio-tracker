@@ -13,8 +13,8 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     // The password cannot be null
     password: {
