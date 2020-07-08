@@ -1,0 +1,260 @@
+<html>
+  <head>
+    <title>Stock Dashboard</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      rel="stylesheet"
+    />
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <link href="stylesheets/dashboard.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <header>Stock Dashboard</header>
+    <div class="flex-container-stocks">
+    
+        <form action="/api-add-ticker">
+          <label for="fname">Ticker</label>
+          <input type="text" id="fname" name="Ticker" placeholder="Enter Stock Ticker..">
+    
+      
+          <label for="sector">Sector</label>
+          <select id="sector" name="sector">
+                  <option class="dropdown-color" value="cnd">Consumer Non-Durables</option>
+                  <option class="dropdown-color" value="comm">Communications</option>
+                  <option class="dropdown-color" value="et">Electronic Technology</option>
+                  <option class="dropdown-color" value="fin">Finance</option>
+                  <option class="dropdown-color" value="ht">Health Technology</option>
+                  <option class="dropdown-color" value="ts">Technology Services</option>
+                  <option class="dropdown-color" value="rt">Retail Trade</option>
+          </select>
+        
+          <input type="submit" value="Submit">
+        </form>
+           
+        </div>
+    </div>
+    <br>
+    
+    <header>General Indicators</header>
+    <div class="flex-container">
+        <div class="fifth trend-up">DJIA</div>
+        <div class="fifth trend-up">S&P 500</div>
+        <div class="fifth trend-up">NASDAQ</div>
+        <div class="fifth trend-down">VIX </div>
+        <div class="fifth trend-up">GOLD</div>
+
+        <div class="fifth">CUSD Daily</div>
+        <div class="fifth">CUSD 3 Day Avg</div>
+        <div class="fifth">CUSD 30 Day Avg</div>
+        <div class="fifth trend-up">Daily Traffic</div>
+        <div class="fifth trend-up">BITCOIN</div>
+      </div>
+      <header>* CUSD = Covid 19 Deaths US and Territories</header>
+
+    <div>
+  
+<br>
+    <header>Portfolio Type One</header>
+    <div class="flex-container-stocks">
+
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        <div class="eight trend-up">AMZN </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+    </div>
+        <header>Portfolio Type One</header>
+        <div class="flex-container-stocks">
+
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+
+        <div class="eight trend-up">AMZN - Amazon </div>
+        <div class="eight trend-up">3057.04</div>
+        <div class="eight trend-up">USD +166.74</div>
+        <div class="eight trend-up">UP 5.77% </div>
+        <div class="eight trend-up">PE 146.03</div>
+        <div class="eight trend-up">Div Yeild  </div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+        <div class="eight trend-up">52-wk low 1626.03</div>
+</div>
+<header>Portfolio Type Three</header>
+<div class="flex-container-stocks">
+
+<div class="eight trend-up">AMZN - Amazon </div>
+<div class="eight trend-up">3057.04</div>
+<div class="eight trend-up">USD +166.74</div>
+<div class="eight trend-up">UP 5.77% </div>
+<div class="eight trend-up">PE 146.03</div>
+<div class="eight trend-up">Div Yeild  </div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+
+<div class="eight trend-up">AMZN - Amazon </div>
+<div class="eight trend-up">3057.04</div>
+<div class="eight trend-up">USD +166.74</div>
+<div class="eight trend-up">UP 5.77% </div>
+<div class="eight trend-up">PE 146.03</div>
+<div class="eight trend-up">Div Yeild  </div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+
+<div class="eight trend-up">AMZN - Amazon </div>
+<div class="eight trend-up">3057.04</div>
+<div class="eight trend-up">USD +166.74</div>
+<div class="eight trend-up">UP 5.77% </div>
+<div class="eight trend-up">PE 146.03</div>
+<div class="eight trend-up">Div Yeild  </div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+
+<div class="eight trend-up">AMZN - Amazon </div>
+<div class="eight trend-up">3057.04</div>
+<div class="eight trend-up">USD +166.74</div>
+<div class="eight trend-up">UP 5.77% </div>
+<div class="eight trend-up">PE 146.03</div>
+<div class="eight trend-up">Div Yeild  </div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+
+<div class="eight trend-up">AMZN - Amazon </div>
+<div class="eight trend-up">3057.04</div>
+<div class="eight trend-up">USD +166.74</div>
+<div class="eight trend-up">UP 5.77% </div>
+<div class="eight trend-up">PE 146.03</div>
+<div class="eight trend-up">Div Yeild  </div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+
+<div class="eight trend-up">AMZN - Amazon </div>
+<div class="eight trend-up">3057.04</div>
+<div class="eight trend-up">USD +166.74</div>
+<div class="eight trend-up">UP 5.77% </div>
+<div class="eight trend-up">PE 146.03</div>
+<div class="eight trend-up">Div Yeild  </div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+
+<div class="eight trend-up">AMZN - Amazon </div>
+<div class="eight trend-up">3057.04</div>
+<div class="eight trend-up">USD +166.74</div>
+<div class="eight trend-up">UP 5.77% </div>
+<div class="eight trend-up">PE 146.03</div>
+<div class="eight trend-up">Div Yeild  </div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+<div class="eight trend-up">52-wk low 1626.03</div>
+
+</div>
+
+</div>
+
+
+  </div>
+    </body>
+  </html>
+
+ 
+    <!-- Javascript -->
+    <script src="assets/script-date.js"></script>
+    <script src="assets/script.js"></script>
+
+  </body>
+</html>
