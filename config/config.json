@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "jonafi",
-    "password": "bj200e",
+    "username": "root",
+    "password": "Secret2020$",
     "database": "passport_demo",
-    "host": "pi.hole",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
