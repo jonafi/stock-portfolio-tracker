@@ -1,5 +1,5 @@
 // NPM crypto-price
-const price = require('crypto-price')
+const price = require("crypto-price")
 
 // NPM finnhub
 
@@ -36,7 +36,7 @@ price.getCryptoPrice("USD", "BTC").then(obj => { // Base for ex - USD, Crypto fo
 ///////////////////////////////////////////////////
 
 // STOCK TICKER & COMPANY NAME
-request('https://finnhub.io/api/v1/stock/profile2?symbol=AMZN&token=brvkn6nrh5rd378r3l5g', { json: true }, (err, res, body) => {
+request("https://finnhub.io/api/v1/stock/profile2?symbol=AMZN&token=brvkn6nrh5rd378r3l5g", { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
   console.log("STOCK TICKER = " + body.ticker);
   console.log("COMPANY NAME = " + body.name);
@@ -62,6 +62,7 @@ request('https://finnhub.io/api/v1/stock/price-target?symbol=AMZN&token=brvkn6nr
   console.log("Mediam TG = " + body.targetMedian);
 });
 
+// COVID
 request(
   "https://finnhub.io/api/v1/covid19/us?token=brvkn6nrh5rd378r3l5g",
   { json: true },
