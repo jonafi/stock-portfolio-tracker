@@ -19,6 +19,10 @@
     border-radius: 2px;
     border: 1px dotted #fff;
   }
+
+  button {
+    color: brown;
+  }
   
   p {
     margin: 25px 10px 5px 10px;
@@ -94,16 +98,14 @@
     flex-flow: row wrap;
   }
 
-
-
   .full {
     width: 93%; /* IE */
     flex: 0 1 93%;
   }
   
   .half {
-    width: 49%; /* IE */
-    flex: 0 2 calc(50% - 20px);
+    width: 48%; /* IE */
+    flex: 0 2 calc(48.5% - 20px);
   }
   
   .third {
@@ -146,7 +148,7 @@
   }
 
   input[type=text], select {
-    width: 41%;
+    width: 91%;
     padding: 0px 20px;
     margin: 8px 0;
     display: inline-block;
