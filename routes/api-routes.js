@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const { Op } = require("sequelize");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -52,4 +53,31 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Route for getting stock data
+  app.get("/api/display_portfolio", (req, res) => {
+    db.Portfolio.findAll({
+      where: {
+        stock_1: { [Op.ne]: null } //works with "vz" as well
+      }
+    }).then(res => {
+      const output = {
+        stocklist: res
+      };
+      // console.log(res[1].dataValues.portfolio_name);
+      console.log(output);
+    });
+  });
+
+  // router.get("/", function (req, res) {
+  //   burger.selectAll(function (data) {
+  //     let output = {
+  //       burger: data
+  //     };
+  //     res.render("index", output);
+  //   });
+  // });
+  // Used following data
+  // https://sequelize.org/master/manual/model-querying-basics.html
+  // https://stackoverflow.com/questions/59016613/sequelize-find-all-where-currentusereditor-is-not-null
 };
