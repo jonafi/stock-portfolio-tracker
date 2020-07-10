@@ -55,9 +55,9 @@ module.exports = function(app) {
   app.post("/api/createportfolio", (req, res) => {
 
     db.Portfolio.create({
-      portfolio_name: "auto",
-      stock_1: "f",
-      stock_2: "gm"
+      portfolio_name: "energy",
+      stock_1: "bb",
+      stock_2: "zq"
     })
       .then(() => {
        // res.redirect(307, "/api/login");
@@ -67,5 +67,22 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
+
+
+
+
+  app.get("/displaytest", (req, res)=> 
+  db.Portfolio.findAll()
+  .then(portfolio=>{
+    console.log(portfolio[0]);
+     
+   // res.sendStatus(200);
+   let output = {portfolio};
+
+
+    res.render("index", output);
+  })
+);
+
 
 };
