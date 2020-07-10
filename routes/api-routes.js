@@ -80,4 +80,19 @@ module.exports = function(app) {
   // Used following data
   // https://sequelize.org/master/manual/model-querying-basics.html
   // https://stackoverflow.com/questions/59016613/sequelize-find-all-where-currentusereditor-is-not-null
+
+  app.post("/api/createportfolio", (req, res) => {
+    db.Portfolio.create({
+      portfolio_name: "auto",
+      stock_1: "f",
+      stock_2: "gm"
+    })
+      .then(() => {
+        // res.redirect(307, "/api/login");
+        res.redirect("/members");
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
+  });
 };
