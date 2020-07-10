@@ -1,15 +1,16 @@
 {
   "development": {
     "username": "root",
-    "password": "Secret2020$",
+    "password": "password",
     "database": "passport_demo",
     "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -18,3 +19,4 @@
     "dialect": "mysql"
   }
 }
+
