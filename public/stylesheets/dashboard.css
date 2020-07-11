@@ -178,3 +178,8 @@
   .dropdown-color {
       color: black;
   }
+
+  /* Cards used to hold stocks */
+  .card-body {
+    background-color: #1288d1;
+  }

@@ -32,26 +32,6 @@
             </div>
         </div>
     </form>
-
-    {{!-- {{#each portfolio}}
-    {{#if hasstocks}}
-        <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            {{id}}. {{stocklist}}
-            </a>
-        </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    {{#each stockliststocks}}
-                    <div class="eight trend-up">
-                        {{id}}. {{stockname}}
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-    {{/if}}
-    {{/each}} --}}
-
 {{#each portfolio}}
 {{#if dataValues.display}}
 <p>
@@ -67,92 +47,35 @@
 {{/if}}
 {{/each}}
 
-    <header>Portfolio Type One</header>
-    <div class="flex-container-stocks">
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
 
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-    </div>
-    <header>Portfolio Type One</header>
-    <div class="flex-container-stocks">
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-    </div>
-    <header>Portfolio Type Three</header>
-    <div class="flex-container-stocks">
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-
-        <div class="eight trend-up">AMZN</div>
-        <div class="eight trend-up">Amazon.com Inc</div>
-        <div class="eight trend-up">C 3081.11</div>
-        <div class="eight trend-up">H 3087.97 </div>
-        <div class="eight trend-up">L 3012.43</div>
-        <div class="eight trend-up">TG-H 3000</div>
-        <div class="eight trend-up">TG-L 1850</div>
-        <div class="eight trend-up">TG-M 2700</div>
-    </div>
-</div>
-</div>
+        <header>Portfolio Type One STATIC DATA</header>
+        <div class="flex-container-stocks">
+          <div class="eight trend-up">AMZN</div>
+          <div class="eight trend-up">Amazon.com Inc</div>
+          <div class="eight trend-up">C 3081.11</div>
+          <div class="eight trend-up">H 3087.97 </div>
+          <div class="eight trend-up">L 3012.43</div>
+          <div class="eight trend-up">TG-H 3000</div>
+          <div class="eight trend-up">TG-L 1850</div>
+          <div class="eight trend-up">TG-M 2700</div>
+      
+  
+          <div class="eight trend-up">AMZN</div>
+          <div class="eight trend-up">Amazon.com Inc</div>
+          <div class="eight trend-up">C 3081.11</div>
+          <div class="eight trend-up">H 3087.97 </div>
+          <div class="eight trend-up">L 3012.43</div>
+          <div class="eight trend-up">TG-H 3000</div>
+          <div class="eight trend-up">TG-L 1850</div>
+          <div class="eight trend-up">TG-M 2700</div>
+      
+  
+          <div class="eight trend-up">AMZN</div>
+          <div class="eight trend-up">Amazon.com Inc</div>
+          <div class="eight trend-up">C 3081.11</div>
+          <div class="eight trend-up">H 3087.97 </div>
+          <div class="eight trend-up">L 3012.43</div>
+          <div class="eight trend-up">TG-H 3000</div>
+          <div class="eight trend-up">TG-L 1850</div>
+          <div class="eight trend-up">TG-M 2700</div>
+      </div>
