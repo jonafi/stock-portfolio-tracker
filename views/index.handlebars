@@ -1,0 +1,186 @@
+{{!-- <html> --}}
+{{!-- <head>
+    <title>Stock Dashboard</title>
+
+    <!-- FONT AWESOME -->
+    <link
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      rel="stylesheet"
+    />
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <link href="stylesheets/dashboard.css" rel="stylesheet">
+
+  </head> --}}
+{{!-- <body> --}}
+<header>Stock Dashboard</header>
+<div class="flex-container">
+    <div class="half trend-up">GLD 107.09</div>
+    <div class="half trend-up">BTC 9447.67</div>
+</div>
+<div>
+    <br>
+    <form>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group-sm">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter stock ticker">
+                </div>
+                <select class="selectpicker form-control">
+                    <option>Choose a portfolio catagory</option>
+                    <option class="dropdown-color">Energy</option>
+                    <option class="dropdown-color">Materials</option>
+                    <option class="dropdown-color">Industrials</option>
+                    <option class="dropdown-color">Consumer Discretionary</option>
+                    <option class="dropdown-color">Consumer Staples</option>
+                    <option class="dropdown-color">Health Care</option>
+                    <option class="dropdown-color">Financials</option>
+                    <option class="dropdown-color">Information Technology</option>
+                    <option class="dropdown-color">Telecommunication Services</option>
+                    <option class="dropdown-color">Utilities</option>
+                    <option class="dropdown-color">Real Estate</option>
+                    <option class="dropdown-color">Custom One</option>
+                    <option class="dropdown-color">Custom Two</option>
+                    <option class="dropdown-color">Custom Three</option>
+                </select>
+                <button type="submit" class="btn btn-primary mt-2 btn btn-block">Add Stock</button>
+            </div>
+        </div>
+    </form>
+
+    {{#each stocklist}}
+    {{#if hasstocks}}
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            {{id}}. {{stocklist}}
+            </a>
+        </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    {{#each stockliststocks}}
+                    <div class="eight trend-up">
+                        {{id}}. {{stockname}}
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+    {{/if}}
+    {{/each}}
+
+
+    <header>Portfolio Type One</header>
+    <div class="flex-container-stocks">
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+    </div>
+    <header>Portfolio Type One</header>
+    <div class="flex-container-stocks">
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+    </div>
+    <header>Portfolio Type Three</header>
+    <div class="flex-container-stocks">
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+
+        <div class="eight trend-up">AMZN</div>
+        <div class="eight trend-up">Amazon.com Inc</div>
+        <div class="eight trend-up">C 3081.11</div>
+        <div class="eight trend-up">H 3087.97 </div>
+        <div class="eight trend-up">L 3012.43</div>
+        <div class="eight trend-up">TG-H 3000</div>
+        <div class="eight trend-up">TG-L 1850</div>
+        <div class="eight trend-up">TG-M 2700</div>
+    </div>
+</div>
+</div>
+{{!-- </body> --}}
+{{!-- </html>
+    <!-- Javascript -->
+    <script src="assets/script-date.js"></script>
+    <script src="assets/script.js"></script>
+  </body>
+</html> --}}
