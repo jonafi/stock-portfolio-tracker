@@ -23,6 +23,27 @@ module.exports = function(sequelize, DataTypes) {
     },
     stock_3: {
       type: DataTypes.STRING
+    },
+    stock_4: {
+      type: DataTypes.STRING
+    },
+    stock_5: {
+      type: DataTypes.STRING
+    },
+    stock_6: {
+      type: DataTypes.STRING
+    },
+    stock_7: {
+      type: DataTypes.STRING
+    },
+    stock_8: {
+      type: DataTypes.STRING
+    },
+    stock_9: {
+      type: DataTypes.STRING
+    },
+    stock_10: {
+      type: DataTypes.STRING
     }
   });
 
