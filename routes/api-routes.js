@@ -95,15 +95,12 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-  app.get("/displaytest", (req, res)=> 
+  app.get("/displaytest", (req, res) =>
   db.Portfolio.findAll()
   .then(portfolio=>{
-    console.log(portfolio[0]);
-     
+    console.log(portfolio[0]); 
    // res.sendStatus(200);
    let output = {portfolio};
-
-
     res.render("index", output);
   })
 );
