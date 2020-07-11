@@ -1,38 +1,3 @@
-{{!-- <html> --}}
-{{!-- <head>
-    <title>Stock Dashboard</title>
-
-    <!-- FONT AWESOME -->
-    <link
-      crossorigin="anonymous"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      rel="stylesheet"
-    />
-
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Bootstrap CDN -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-
-    <!-- Bootstrap Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/style.css" />
-    <link href="stylesheets/dashboard.css" rel="stylesheet">
-
-  </head> --}}
-{{!-- <body> --}}
 <header>Stock Dashboard</header>
 <div class="flex-container">
     <div class="half trend-up">GLD 107.09</div>
@@ -68,7 +33,7 @@
         </div>
     </form>
 
-    {{#each stocklist}}
+    {{!-- {{#each portfolio}}
     {{#if hasstocks}}
         <p>
             <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -85,8 +50,22 @@
                 </div>
             </div>
     {{/if}}
-    {{/each}}
+    {{/each}} --}}
 
+{{#each portfolio}}
+{{#if dataValues.display}}
+<p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#{{dataValues.portfolio_id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+        {{dataValues.portfolio_name}}---{{dataValues.stock_1}}
+    </a>
+</p>
+<div class="collapse" id="{{dataValues.portfolio_id}}">
+  <div class="card card-body">
+    {{dataValues.stock_1}}
+  </div>
+</div>
+{{/if}}
+{{/each}}
 
     <header>Portfolio Type One</header>
     <div class="flex-container-stocks">
@@ -177,10 +156,3 @@
     </div>
 </div>
 </div>
-{{!-- </body> --}}
-{{!-- </html>
-    <!-- Javascript -->
-    <script src="assets/script-date.js"></script>
-    <script src="assets/script.js"></script>
-  </body>
-</html> --}}
