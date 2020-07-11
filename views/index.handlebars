@@ -53,16 +53,18 @@
     {{/each}} --}}
 
 {{#each portfolio}}
+{{#if dataValues.display}}
 <p>
-    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <a class="btn btn-primary" data-toggle="collapse" href="#{{dataValues.portfolio_id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
         {{dataValues.portfolio_name}}---{{dataValues.stock_1}}
     </a>
 </p>
-<div class="collapse" id="collapseExample">
+<div class="collapse" id="{{dataValues.portfolio_id}}">
   <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    {{dataValues.stock_1}}
   </div>
 </div>
+{{/if}}
 {{/each}}
 
     <header>Portfolio Type One</header>
