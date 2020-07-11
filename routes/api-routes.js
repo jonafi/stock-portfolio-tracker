@@ -104,4 +104,21 @@ module.exports = function(app) {
     res.render("index", output);
   })
 );
+
+
+const finnhub = require("finnhub");
+const api_key = finnhub.ApiClient.instance.authentications["api_key"];
+api_key.apiKey = "brvkn6nrh5rd378r3l5g";
+const finnhubClient = new finnhub.DefaultApi();
+
+
+app.get("/finntest", (req, res) =>
+  finnhubClient.quote("AMZN", (error, data) => {
+    res.json({
+      data
+    });
+  })
+);
+
+
 };
