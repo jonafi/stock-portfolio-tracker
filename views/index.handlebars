@@ -9,9 +9,9 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="form-group-sm">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter stock ticker">
+                    <input type="text" class="form-control" id="tickerfield" placeholder="Enter stock ticker">
                 </div>
-                <select class="selectpicker form-control">
+                <select class="selectpicker form-control" id="portfoliofield">
                     <option>Choose a portfolio catagory</option>
                     <option class="dropdown-color">Energy</option>
                     <option class="dropdown-color">Materials</option>
@@ -28,10 +28,11 @@
                     <option class="dropdown-color">Custom Two</option>
                     <option class="dropdown-color">Custom Three</option>
                 </select>
-                <button type="submit" class="btn btn-primary mt-2 btn btn-block">Add Stock</button>
+                <button type="submit" class="btn btn-primary mt-2 btn btn-block" id="addStockButton">Add Stock</button>
             </div>
         </div>
     </form>
+    <div id="quote1">Holder for apiCall Test</div> <!-- Need to add into handlebar sections -->
 {{#each portfolio}}
 {{#if dataValues.display}}
 <p>
@@ -41,7 +42,34 @@
 </p>
 <div class="collapse" id="{{dataValues.portfolio_id}}">
   <div class="card card-body">
-    {{dataValues.stock_1}}
+    {{dataValues.stock_1}}<br>
+    {{#if dataValues.stock_2}}
+    {{dataValues.stock_2}}<br>
+    {{/if}}
+    {{#if dataValues.stock_3}}
+    {{dataValues.stock_3}}<br>
+    {{/if}}
+    {{#if dataValues.stock_4}}
+    {{dataValues.stock_4}}<br>
+    {{/if}}
+    {{#if dataValues.stock_5}}
+    {{dataValues.stock_5}}<br>
+    {{/if}}
+    {{#if dataValues.stock_6}}
+    {{dataValues.stock_6}}<br>
+    {{/if}}
+    {{#if dataValues.stock_7}}
+    {{dataValues.stock_7}}<br>
+    {{/if}}
+    {{#if dataValues.stock_8}}
+    {{dataValues.stock_8}}<br>
+    {{/if}}
+    {{#if dataValues.stock_9}}
+    {{dataValues.stock_9}}<br>
+    {{/if}}
+    {{#if dataValues.stock_10}}
+    {{dataValues.stock_10}}
+    {{/if}}
   </div>
 </div>
 {{/if}}
