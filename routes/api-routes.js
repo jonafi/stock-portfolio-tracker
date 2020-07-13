@@ -66,8 +66,33 @@ module.exports = function(app) {
       };
       // console.log(res[1].dataValues.portfolio_name);
       console.log(output);
+      console.log("LOGGING" + output.stocklist[1].stock_1);
+      console.log("LOGGING" + JSON.stringify(output.stocklist[1].dataValues));
+      const neededstocklist = JSON.stringify(output.stocklist[1].dataValues);
+      console.log("neededstocklist is " + neededstocklist);
+      const splitneededstocklist = neededstocklist.split(", ");
+      // console.log("LOGGING" + JSON.stringify(output.stocklist[1].dataValues));
     });
   });
+
+  //   app.get("/api/get_saved_stocks", (req, res) => {
+  //     db.Portfolio.findAll({
+  //       where: {
+  //         stock_1: { [Op.ne]: null }
+  //       }.then(res => {
+  //       const output = {
+  //         stocklist: res
+  //       };
+
+  //       app.get("/finntest", (req, res) =>
+  //   finnhubClient.quote("AMZN", (error, data) => {
+  //     res.json({
+  //       data
+  //     });
+  //   })
+  // );
+  //     })
+  //   })
 
   // router.get("/", function (req, res) {
   //   burger.selectAll(function (data) {
@@ -80,6 +105,23 @@ module.exports = function(app) {
   // Used following data
   // https://sequelize.org/master/manual/model-querying-basics.html
   // https://stackoverflow.com/questions/59016613/sequelize-find-all-where-currentusereditor-is-not-null
+
+  app.get("/api/updateportfolio", (req, res) => {
+    const inputportfolio_name = req.portfolioValue;
+    console.log("inputportfolio_name is currently " + inputportfolio_name);
+    console.log("Our input is " + JSON.stringify(req.body));
+    console.log("Our input is " + req);
+    db.Portfolio.update(
+      { stock_2: "AAAA" },
+      { where: { portfolio_name: "Energy" } }
+    )
+      .then(() => {
+        console.log("Done SQLing ");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
 
   app.post("/api/createportfolio", (req, res) => {
     db.Portfolio.create({
@@ -96,29 +138,57 @@ module.exports = function(app) {
       });
   });
   app.get("/displaytest", (req, res) =>
-  db.Portfolio.findAll()
-  .then(portfolio=>{
-    console.log(portfolio[0]); 
-   // res.sendStatus(200);
-   let output = {portfolio};
+    db.Portfolio.findAll().then(portfolio => {
+    console.log(portfolio[0]);
+    // res.sendStatus(200);
+    const output = { portfolio };
     res.render("index", output);
   })
-);
+  );
 
+  const finnhub = require("finnhub");
+  const api_key = finnhub.ApiClient.instance.authentications.api_key;
+  api_key.apiKey = "brvkn6nrh5rd378r3l5g";
+  const finnhubClient = new finnhub.DefaultApi();
 
-const finnhub = require("finnhub");
-const api_key = finnhub.ApiClient.instance.authentications["api_key"];
-api_key.apiKey = "brvkn6nrh5rd378r3l5g";
-const finnhubClient = new finnhub.DefaultApi();
-
-
-app.get("/finntest", (req, res) =>
-  finnhubClient.quote("AMZN", (error, data) => {
+  app.get("/finntest", (req, res) =>
+    finnhubClient.quote(req.body.ticker, (error, data) => {
     res.json({
       data
     });
   })
-);
+  );
 
+  // app.get("/davisfinntest1", (req, res) =>
+  //   finnhubClient.quote("ZZZZ", (error, data) => {
+  //     if (error) {
+  //       console.log(error);
+  //     }
+  //     res.json({
+  //       data
+  //     });
+  //   })
+  // );
 
+  // app.get("/davisfinntest2", (req, res) =>
+  //   finnhubClient.quote("zzzz", (error, data) => {
+  //     if (error) {
+  //       console.log(error);
+  //     }
+  //     res.json({
+  //       data
+  //     });
+  //   })
+  // );
+
+  // app.get("/davisfinntest3", (req, res) =>
+  //   finnhubClient.quote("amzn", (error, data) => {
+  //     if (error) {
+  //       console.log(error);
+  //     }
+  //     res.json({
+  //       data
+  //     });
+  //   })
+  // );
 };
