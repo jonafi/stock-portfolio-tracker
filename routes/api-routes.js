@@ -106,21 +106,39 @@ module.exports = function(app) {
   // https://sequelize.org/master/manual/model-querying-basics.html
   // https://stackoverflow.com/questions/59016613/sequelize-find-all-where-currentusereditor-is-not-null
 
-  app.get("/api/updateportfolio", (req, res) => {
-    const inputportfolio_name = req.portfolioValue;
-    console.log("inputportfolio_name is currently " + inputportfolio_name);
-    console.log("Our input is " + JSON.stringify(req.body));
-    console.log("Our input is " + req);
-    db.Portfolio.update(
-      { stock_2: "AAAA" },
-      { where: { portfolio_name: "Energy" } }
-    )
-      .then(() => {
-        console.log("Done SQLing ");
-      })
-      .catch(err => {
-        console.log(err);
-      });
+  app.put("/api/updateportfolio", (req, res) => {
+    // console.log(req);
+    // get stuff
+    console.log(req.body);
+    const testvalue = req.body;
+    console.log("api-routes.js testvalue.portfolioValue is " + testvalue.portfolioValue);
+    console.log("api-routes.js testvalue.tickerValue is " + testvalue.tickerValue);
+        // do stuff
+      db.Portfolio.update(
+      { stock_2: testvalue.tickerValue },
+      { where: { portfolio_name: testvalue.portfolioValue } }
+    );
+    //respone with stuff
+    // put into database
+    // then after added to DB respond with success
+    res.json({response:"response"});
+    
+    
+    
+    // const inputportfolio_name = req.portfolioValue;
+    // console.log("inputportfolio_name is currently " + inputportfolio_name);
+    // console.log("Our input is " + JSON.stringify(req.body));
+    // console.log("Our input is " + req);
+    // db.Portfolio.update(
+    //   { stock_2: "AAAA" },
+    //   { where: { portfolio_name: "Energy" } }
+    // )
+    //   .then(() => {
+    //     console.log("Done SQLing ");
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //   });
   });
 
   app.post("/api/createportfolio", (req, res) => {
