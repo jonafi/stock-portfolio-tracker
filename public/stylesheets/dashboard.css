@@ -9,7 +9,10 @@
   body {
     padding: 50px;
     margin-left: 40px;
-    background: rgba(0, 0, 0, 0.959)
+    /* background: rgba(0, 0, 0, 0.959); */
+    background-image: url("../../assets/img/background3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   code {
