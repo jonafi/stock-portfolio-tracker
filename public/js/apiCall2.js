@@ -19,13 +19,20 @@ $(document).ready(() => {
     const portfolioValue = $("#portfoliofield").val();
     console.log(portfolioValue);
     //   $.get("/api/updateportfolio", {portfolio_name: portfolioValue, stock_2: tickerValue});
-    $.get("/api/updateportfolio", function(portfolioValue) {
-        console.log("trying to get portfolioValue to show up somewhere " + portfolioValue);
+    $.ajax({
+        type: "PUT",
+        url: "/api/updateportfolio",
+        data: {portfolioValue, tickerValue},
+        success: (res) => console.log(res),
+      });
+    // $.get("/api/updateportfolio", function(portfolioValue) {
+    //     console.log("trying to get portfolioValue to show up somewhere " + portfolioValue);
 
-    }).then(() => {
-        // res.redirect(307, "/api/login");
-        console.log("Done SQLing " + portfolioValue);
-      })
+    // })
+    // .then(() => {
+    //     // res.redirect(307, "/api/login");
+    //     console.log("Done SQLing " + portfolioValue);
+    //   })
     ;
   });
   //   Next step is pass tickerValue and portfolioValue to API so it will return quote info
