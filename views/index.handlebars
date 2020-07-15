@@ -37,14 +37,25 @@
 {{#if dataValues.display}}
 <p>
     <a class="btn btn-primary" data-toggle="collapse" href="#{{dataValues.portfolio_id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
-        {{dataValues.portfolio_name}}---{{dataValues.stock_1}}
+        {{dataValues.portfolio_name}}
     </a>
 </p>
 <div class="collapse" id="{{dataValues.portfolio_id}}">
   <div class="card card-body">
+    
+    <div class="flex-container-stocks">
+          <div class="eight trend-up">{{dataValues.stock_1}}</div>
+          <div class="eight trend-up">Amazon.com Inc</div>
+          <div class="eight trend-up">C 3081.11</div>
+          <div class="eight trend-up">H 3087.97 </div>
+          <div class="eight trend-up">L 3012.43</div>
+          <div class="eight trend-up">TG-H 3000</div>
+          <div class="eight trend-up">TG-L 1850</div>
+          <div class="eight trend-up">TG-M 2700</div>
+          </div>
     {{dataValues.stock_1}}<br>
     {{#if dataValues.stock_2}}
-    {{dataValues.stock_2}}<br>
+    {{dataValues.stock_2}} <br>
     {{/if}}
     {{#if dataValues.stock_3}}
     {{dataValues.stock_3}}<br>
