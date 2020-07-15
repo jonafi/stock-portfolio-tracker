@@ -181,5 +181,8 @@
 
   /* Cards used to hold stocks */
   .card-body {
-    background-color: #1288d1;
+    background-color: darkgreen;
+  }
+  .welcome{
+    color:white;
   }
