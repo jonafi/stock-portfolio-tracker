@@ -1,7 +1,8 @@
 # Stock Portfolio Tracker 
 
 ## Description 
-This app will allow the user to create a stock portfolio which tracks their stocks of interest
+This app will allow the user to create a stock portfolio which tracks their stocks of interest.
+
 ## Table of Contents 
 * [Concepts](#Concepts)
 * [Deployment](#Deployment)
@@ -19,10 +20,11 @@ This app will allow the user to create a stock portfolio which tracks their stoc
 * Travis-CI
 * ESLint
 * MySQL
+
 ## Deployment 
 The Stock Portfolio Tracker is deployed on heroku here: https://team-caribou.herokuapp.com/
 
 ## Screenshot
-![program working](screenshot/stock-pic.png)
+![program working](screenshot/new-pic.png)
 
 
